@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>
+      Make.OpenData.ch Bern Statistics
+    </title>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Title');
+          data.addColumn('number', 'Count');
+          data.addRows([['Datenbesitzer', 5],
+                        ['Designer', 3],
+                        ['Developer', 8],
+                        ['Fachexpert', 5],
+                        ['Forscher', 4],
+                        ['Grafiker', 3],
+                        ['Ideengeber', 5],
+                        ['Informatikstudent', 8],
+                        ['Journalist', 4],
+                        ['Mobile', 3],
+                        ['Softwareentwickler', 8],
+                        ['Usabilityprofi', 3],
+                        ['Web', 3]]);
+      
+          new google.visualization.BarChart(document.getElementById('visualization')).
+            draw(data,
+                 {title:"",
+                  width:600, height:400, legend:'none',
+                  colors: ['red'],
+                  vAxis: {title: ""},
+                  hAxis: {title: ""}}
+            );
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+    </script>
+    <style type="text/css">
+    	html,body { padding:0; margin:0; }
+    </style>
+  </head>
+  <body style="font-family: Arial;border: 0 none; margin-left:20px">
+    <div id="visualization" style="width: 600px; height: 400px;"></div>
+  </body>
+</html>
