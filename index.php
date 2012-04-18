@@ -43,6 +43,10 @@ require_once(DOKU_INC.'inc/init.php');
 	#ss-form .ss-choice-item:last-child { display: block; }
 	#ss-form .ss-choice-item:last-child label:last-child { width: auto; }
 	.ss-required-asterisk { text-align:right; color:black; font:10pt sans-serif; }
+	
+	.section-sponsor table { background: white; }
+	.section-sponsor table a { color: green; text-decoration: none; font-size: 123%; margin-left:1em; }
+
 	</style>
   </head>
 
